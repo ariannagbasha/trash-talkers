@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-import {firestore} from '../firebase'
+import {firestore} from '../firebase';
+
+import './AddPost.css';
 
 class AddPost extends Component {
   state = { title: '', content: '' };

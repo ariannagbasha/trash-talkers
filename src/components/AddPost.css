@@ -1,0 +1,10 @@
+form {
+    border: 1px dashed black;
+    display: flex;
+    padding: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: linear-gradient(to right, #FF7676 0%, #FFFB80 50%, #FF7676 100%);
+    justify-content: center;    
+    box-shadow: 0px 0px 12px 0px black;
+}
