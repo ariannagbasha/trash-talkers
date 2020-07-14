@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {firestore} from '../firebase'
-
+import {firestore} from '../firebase';
+import './Application.css'
 
 import Posts from './Posts';
 import { collectsIdsAndDocs } from '../ultilities';
@@ -54,7 +54,7 @@ class Application extends Component {
 
     return (
       <main className="Application">
-        <h1>Think Piece</h1>
+        <h1>The Trash Bin</h1>
         <Posts posts={posts}  />
       </main>
     );
