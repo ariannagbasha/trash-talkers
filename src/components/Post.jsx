@@ -12,7 +12,8 @@ const Post = ({ title, content, user, createdAt, stars, comments, id}) => {
   const star = () => postRef.update({ stars: stars + 1});
   return (
     <article className="Post">
-      <div className="Post--content">
+      <div className="Post-content">
+        <div className="Post--content">
         <h3>{title}</h3>
         <div>{content}</div>
       </div>
@@ -20,22 +21,23 @@ const Post = ({ title, content, user, createdAt, stars, comments, id}) => {
         <div>
           <p>
             <span role="img" aria-label="star">
-              ⭐️
+            ☕
             </span>
             {stars}
           </p>
           <p>
             <span role="img" aria-label="comments">
-              🙊
+            💼
             </span>
             {comments}
           </p>
           <p>Posted by {user.displayName}</p>
           <p>{moment(createdAt).calendar()}</p>
         </div>
+        </div>
         <div>
-          <button className="star" onClick={star}>Star</button>
-          <button className="delete" onClick={remove}>Take Out The Trash</button>
+          <button className="star" onClick={star}>Take A Sip</button>
+          <button className="delete" onClick={remove}>Clean It Up</button>
         </div>
       </div>
     </article>

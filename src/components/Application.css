@@ -1,8 +1,14 @@
+body {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: blanchedalmond;
+}
+
 h1 {
     border: 1px dashed black;
     padding: 4px;
     text-align: center;
-    background: linear-gradient(to right, #FF7676 0%, #FFFB80 50%, #FF7676 100%);
+    background: linear-gradient(to right, #9B97FF 0%, #C3EDFF 25%, #C8FDFF 50%, #C3EDFF 75%, #9B97FF 100%);
     box-shadow: 0px 0px 24px 0px black;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 30px;

@@ -1,3 +1,6 @@
-div .Post--content {
-    background-color: blanchedalmond;
+div .Post-content {
+    border: 1px solid black;
+    padding: 10px;
+    justify-content: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
