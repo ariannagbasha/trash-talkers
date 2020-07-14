@@ -54,7 +54,7 @@ class Application extends Component {
 
     return (
       <main className="Application">
-        <h1>The Trash Bin</h1>
+        <h1>The Water Cooler</h1>
         <Posts posts={posts}  />
       </main>
     );

@@ -2,7 +2,9 @@ import React from 'react';
 
 import moment from 'moment';
 
-import {firestore} from '../firebase'
+import {firestore} from '../firebase';
+
+import './Post.css';
 
 const Post = ({ title, content, user, createdAt, stars, comments, id}) => {
   const postRef = firestore.doc(`posts/${id}`) ///Needs to be fixed id
@@ -33,7 +35,7 @@ const Post = ({ title, content, user, createdAt, stars, comments, id}) => {
         </div>
         <div>
           <button className="star" onClick={star}>Star</button>
-          <button className="delete" onClick={remove}>Delete</button>
+          <button className="delete" onClick={remove}>Take Out The Trash</button>
         </div>
       </div>
     </article>

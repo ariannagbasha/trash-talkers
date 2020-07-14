@@ -57,7 +57,7 @@ class AddPost extends Component {
           value={content}
           onChange={this.handleChange}
         />
-        <input className="create" type="submit" value="Toss It In" />
+        <input className="create" type="submit" value="Spill Some Tea" />
       </form>
     );
   }
