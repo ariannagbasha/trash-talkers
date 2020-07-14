@@ -4,6 +4,9 @@ import moment from 'moment';
 
 import {firestore} from '../firebase';
 
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card'
+
 import './Post.css';
 
 const Post = ({ title, content, user, createdAt, stars, comments, id}) => {
@@ -11,7 +14,7 @@ const Post = ({ title, content, user, createdAt, stars, comments, id}) => {
   const remove = () => postRef.delete();
   const star = () => postRef.update({ stars: stars + 1});
   return (
-    <article className="Post">
+    <Card className="Post">
       <div className="Post-content">
         <div className="Post--content">
         <h3>{title}</h3>
@@ -36,11 +39,11 @@ const Post = ({ title, content, user, createdAt, stars, comments, id}) => {
         </div>
         </div>
         <div>
-          <button className="star" onClick={star}>Take A Sip</button>
-          <button className="delete" onClick={remove}>Clean It Up</button>
+          <Button className="star" onClick={star}>Take A Sip</Button>
+          <Button className="delete" onClick={remove}>Clean It Up</Button>
         </div>
       </div>
-    </article>
+    </Card>
   );
 };
 
