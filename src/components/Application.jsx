@@ -7,18 +7,23 @@ import { collectsIdsAndDocs } from '../ultilities';
 
 class Application extends Component {
   state = {
-    posts: []
+    posts: [], 
+    user: null
   };
   
-  unsubscribe = null;
 
-
+  unsubscribeFromFirestore = null;
+  unsubscribeFromAuth = null;
 
   componentDidMount = async () => {
-    this.unsubscribe = firestore.collection('posts').onSnapshot(snapshot => {
+    this.unsubscribeFromFireStore = firestore.collection('posts').onSnapshot(snapshot => {
       const posts = snapshot.docs.map(collectsIdsAndDocs);
       this.setState({posts})
     });
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(user =>{
+      this.setState({user})
+    });
+ 
   }
 
   componentWillUnmount = () => {
@@ -49,8 +54,8 @@ class Application extends Component {
   //   // this.setState({posts});
   // }
 
-  render() {
-    const { posts } = this.state;
+render() {
+  const { posts, user } = this.state;
 
     return (
       <main className="Application">
@@ -60,5 +65,4 @@ class Application extends Component {
     );
   }
 }
-
 export default Application;

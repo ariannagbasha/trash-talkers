@@ -8,8 +8,10 @@ h1 {
     padding: 4px;
     text-align: center;
     background: linear-gradient(to right, blanchedalmond 0%, rgb(255, 224, 177) 20%, rgb(252, 207, 139) 50%, rgb(255, 224, 177) 80%, blanchedalmond 100%);
-    font-family: 'Otto';
-    font-size: 60px;
+    font-family: 'Zapfino';
+    font-size: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
     letter-spacing: 2.4px;
     word-spacing: 5px;
     color: #000000;

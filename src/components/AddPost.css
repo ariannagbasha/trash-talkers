@@ -14,4 +14,9 @@ Button {
 input {
     margin-right: 20px;
     background-color: rgb(203, 235, 247);
+    font-family: 'Zapfino';
+    font-size: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
+   
