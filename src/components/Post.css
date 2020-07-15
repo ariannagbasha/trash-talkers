@@ -1,6 +1,8 @@
+@import url('https://fonts.google.com/specimen/Old+Standard+TT?selection.family=Lato|Old+Standard+TT&category=Serif,Handwriting,Monospace');
+
 div .Post-content {
     border: 1px solid black;
     padding: 10px;
     justify-content: center;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
