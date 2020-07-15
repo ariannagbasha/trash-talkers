@@ -14,7 +14,7 @@ const Post = ({ title, content, user, createdAt, stars, comments, id}) => {
   const remove = () => postRef.delete();
   const star = () => postRef.update({ stars: stars + 1});
   return (
-    <Card className="Post">
+    <Card className="Post" className ="text-center">
       <div className="Post-content">
         <div className="Post--content">
         <Card.Title>{title}</Card.Title>

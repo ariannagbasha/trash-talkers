@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import {firestore} from '../firebase';
 
+import Button from 'react-bootstrap/Button';
+
 import './AddPost.css';
 
 class AddPost extends Component {
@@ -57,7 +59,7 @@ class AddPost extends Component {
           value={content}
           onChange={this.handleChange}
         />
-        <input className="create" type="submit" value="Spill Some Tea" />
+        <Button className="create" type="submit">Spill Some Tea</Button>
       </form>
     );
   }
