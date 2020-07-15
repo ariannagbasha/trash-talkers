@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Authentication from './Authentication';
-import {firestore, auth} from '../firebase'
+import {firestore, auth} from '../firebase';
+import './Application.css';
 
 
 import Posts from './Posts';
