@@ -1,15 +1,13 @@
 body {
-    border: 1px solid black;
     padding: 5px;
     background-color: blanchedalmond;
 }
 
 h1 {
-    border: 1px dashed black;
+    border: 1px dotted black;
     padding: 4px;
     text-align: center;
     background: linear-gradient(to right, #9B97FF 0%, #C3EDFF 25%, #C8FDFF 50%, #C3EDFF 75%, #9B97FF 100%);
-    box-shadow: 0px 0px 24px 0px black;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
     letter-spacing: 2.4px;

@@ -1,13 +1,19 @@
 form {
-    border: 1px dashed black;
+    border: 1px dotted black;
     display: flex;
     padding: 3px;
     padding-top: 5px;
     padding-bottom: 5px;
     background: linear-gradient(to right, #9B97FF 0%, #C3EDFF 25%, #C8FDFF 50%, #C3EDFF 75%, #9B97FF 100%);
-    justify-content: center;    
-    box-shadow: 0px 0px 12px 0px black;
+    justify-content: center;
+    margin-bottom: 5px;
 }
+
 Button {
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input {
+    margin-right: 20px;
+    background-color: rgb(203, 235, 247);
 }
