@@ -17,8 +17,8 @@ const Post = ({ title, content, user, createdAt, stars, comments, id}) => {
     <Card className="Post">
       <div className="Post-content">
         <div className="Post--content">
-        <h3>{title}</h3>
-        <div>{content}</div>
+        <Card.Title>{title}</Card.Title>
+        <Card.Body>{content}</Card.Body>
       </div>
       <div className="Post--meta">
         <div>
@@ -38,10 +38,10 @@ const Post = ({ title, content, user, createdAt, stars, comments, id}) => {
           <p>{moment(createdAt).calendar()}</p>
         </div>
         </div>
-        <div>
+        <Card.Footer>
           <Button className="star" onClick={star}>Take A Sip</Button>
           <Button className="delete" onClick={remove}>Clean It Up</Button>
-        </div>
+        </Card.Footer>
       </div>
     </Card>
   );
