@@ -1,12 +1,10 @@
 form {
-    border: 1px dotted black;
     display: flex;
-    padding: 3px;
     padding-top: 5px;
-    padding-bottom: 5px;
-    background: linear-gradient(to right, #9B97FF 0%, #C3EDFF 25%, #C8FDFF 50%, #C3EDFF 75%, #9B97FF 100%);
+    padding-bottom: 20px;
+    background: linear-gradient(to right, blanchedalmond 0%, rgb(255, 224, 177) 25%, rgb(252, 207, 139) 50%, rgb(255, 224, 177) 75%, blanchedalmond 100%);
     justify-content: center;
-    margin-bottom: 5px;
+    margin-top: -10px;
 }
 
 Button {
