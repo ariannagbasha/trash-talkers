@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-
-import {firestore} from '../firebase';
 
 import Button from 'react-bootstrap/Button';
 
 import './AddPost.css';
-=======
 import { firestore, auth } from '../firebase'
->>>>>>> 9ffde0024e007ce89a154191db9801bdcaa08cea
 
 class AddPost extends Component {
   state = { title: '', content: '' };
