@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Authentication from './Authentication';
-import NavBar from './NavigationBar'
+import NavBar from './NavigationBar';
 import Posts from './Posts';
-
+import './Application.css';
 
 
 

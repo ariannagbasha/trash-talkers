@@ -2,7 +2,6 @@ form {
     display: flex;
     padding-top: 5px;
     padding-bottom: 20px;
-    background: linear-gradient(to right, blanchedalmond 0%, rgb(255, 224, 177) 25%, rgb(252, 207, 139) 50%, rgb(255, 224, 177) 75%, blanchedalmond 100%);
     justify-content: center;
     margin-top: -10px;
 }

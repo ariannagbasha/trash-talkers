@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { signInWithGoogle, getUserDocument, auth, firestore } from '../firebase';
-
+import './SignIn.css';
 
 
 class SignIn extends Component {
