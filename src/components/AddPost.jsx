@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 
 import {firestore} from '../firebase';
 
 import Button from 'react-bootstrap/Button';
 
 import './AddPost.css';
+=======
+import { firestore, auth } from '../firebase'
+>>>>>>> 9ffde0024e007ce89a154191db9801bdcaa08cea
 
 class AddPost extends Component {
   state = { title: '', content: '' };
@@ -17,30 +21,31 @@ class AddPost extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    
+
     const { title, content } = this.state;
+    const { uid, displayName, email, photoURL } = auth.currentUser || {};
+
 
     const post = {
-      id: Date.now().toString(),
       title,
       content,
       user: {
-        uid: '1111',
-        displayName: 'Steve Kinney',
-        email: 'steve@mailinator.com',
-        photoURL: 'http://placekitten.com/g/200/200',
+        uid,
+        displayName,
+        email,
+        photoURL,
       },
       favorites: 0,
       comments: 0,
       createdAt: new Date(),
     }
 
-    firestore.collection('posts').doc(post.id).set(post)
+    firestore.collection('posts').add(post)
 
     this.setState({ title: '', content: '' });
   };
 
- 
+
   render() {
     const { title, content } = this.state;
     return (

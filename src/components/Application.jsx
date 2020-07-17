@@ -1,70 +1,64 @@
 import React, { Component } from 'react'
 import Authentication from './Authentication';
-import {firestore, auth} from '../firebase';
-import './Application.css';
-
-
+import NavBar from './NavigationBar'
 import Posts from './Posts';
-import { collectsIdsAndDocs } from '../ultilities';
+
+
+
+
+
+
+
+
 
 class Application extends Component {
-  state = {
-    posts: [], 
-    user: null
-  };
-  
+  // moved state = {} to componentWillUnmount = () to Providers
 
-  unsubscribeFromFirestore = null;
-  unsubscribeFromAuth = null;
 
-  componentDidMount = async () => {
-    this.unsubscribeFromFireStore = firestore.collection('posts').onSnapshot(snapshot => {
-      const posts = snapshot.docs.map(collectsIdsAndDocs);
-      this.setState({posts})
-    });
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user =>{
-      this.setState({user})
-    });
- 
-  }
+  // state = {
+  //   user: null
+  // };
+  // unsubscribeFromAuth = null;
+  // componentDidMount = async () => {
+  //   this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+  //     this.setState({ user })
+  //   }); 
+  // };
 
-  componentWillUnmount = () => {
-    this.unsubscribe();
-  } 
+  // componentWillUnmount = () => {
+  //   this.unsubscribeFromAuth();
+  // };
 
   // handleCreate = async post => {
   //   // const { posts } = this.state;
-    
   //    firestore.collection('posts').add(post)
-
   //   // const doc = await docRef.get();
-
   //   // const newPost = collectsIdsAndDocs(doc)
-
   //   // this.setState({ posts: [newPost, ...posts] });
   // };
 
-
   // handleRemove = async id => {
   //   // const allPosts = this.state.posts;
-
   //   firestore.doc(`posts/${id}`).delete();
   //   // console.log(id)
-
   //   // const posts = allPosts.filter(post => post.id !== id);
-
   //   // this.setState({posts});
   // }
 
-render() {
-  const { posts, user } = this.state;
-
-    return (
-      <main className="Application">
-        <h1>The Water Cooler</h1>
-        <Posts posts={posts}  />
-      </main>
-    );
-  }
+  render() {
+  return (
+    <main className="Application" style={{
+      background: "url(https://skinrenewalmarco.com/wp-content/uploads/2016/03/shutterstock_345970301-e1536599252720.jpg) no-repeat center center fixed",
+      // backgroundSize: "cover",
+      height: "100%"
+      }}>
+      <NavBar />
+      <h1>Think Piece</h1>
+      <Authentication />
+      <Posts />
+    </main>
+  );
+}
+  
 }
 export default Application;
