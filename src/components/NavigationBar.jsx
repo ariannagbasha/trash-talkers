@@ -35,16 +35,16 @@ render() {
 
   {/* <br /> */}
   <Navbar bg="light" variant="light">
-    <Navbar.Brand href="#home">Think Piece</Navbar.Brand>
+    <Navbar.Brand href="/">Think Piece</Navbar.Brand>
     <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
+      <Nav.Link href="/">Home</Nav.Link>
+      <Nav.Link href="/profile">Your Profile</Nav.Link>
+      <Nav.Link href="/posts">Post Feed</Nav.Link>
     </Nav>
-    <Form inline>
+    {/* <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
       <Button variant="outline-primary">Search</Button>
-    </Form>
+    </Form> */}
   </Navbar>
 </>
   );

@@ -58,7 +58,9 @@ class Application extends Component {
       <h1>Think Piece</h1>
       <Authentication />
       <Switch>
-        <Route exact path="/" component={Posts}/>
+        <Route exact path="/" component={Authentication}/>
+        {/* <Route exact path="/" component={Posts}/> */}
+        <Route exact path="/posts" component={Posts}/>
         <Route exact path="/profile" component={ UserProfile } />
         <Route exact path="/posts/:id" component={ PostPage } />
       </Switch>
