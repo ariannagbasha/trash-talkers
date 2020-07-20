@@ -68,7 +68,7 @@ class AddPost extends Component {
             borderWidth: '2px',
             padding: '.5rem',
             fontFamily: "Sue Ellen Francis co, cursive",
-            fontSize:"large"
+            fontSize:"150"
           }}
           type="text"
           name="title"
