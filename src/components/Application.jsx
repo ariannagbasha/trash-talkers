@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useContext } from 'react'
 import Authentication from './Authentication';
 import NavBar from './NavigationBar';
 import Posts from './Posts';
@@ -6,66 +6,78 @@ import './Application.css';
 import {Switch, Route, Link} from 'react-router-dom'
 import  UserProfile  from './UserProfile';
 import PostPage from './PostPage';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
+import SignOut from './SignOut'
+import ProfilePage from './ProfilePage';
+import {UserContext} from '../providers/UserProvider'
+import  NotFound  from './NotFound'
 
 
 
 
 
+const Application = () => {
+  const user = useContext(UserContext)
 
-
-
-class Application extends Component {
-  // moved state = {} to componentWillUnmount = () to Providers
-
-
-  // state = {
-  //   user: null
-  // };
-  // unsubscribeFromAuth = null;
-  // componentDidMount = async () => {
-  //   this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-  //     this.setState({ user })
-  //   }); 
-  // };
-
-  // componentWillUnmount = () => {
-  //   this.unsubscribeFromAuth();
-  // };
-
-  // handleCreate = async post => {
-  //   // const { posts } = this.state;
-  //    firestore.collection('posts').add(post)
-  //   // const doc = await docRef.get();
-  //   // const newPost = collectsIdsAndDocs(doc)
-  //   // this.setState({ posts: [newPost, ...posts] });
-  // };
-
-  // handleRemove = async id => {
-  //   // const allPosts = this.state.posts;
-  //   firestore.doc(`posts/${id}`).delete();
-  //   // console.log(id)
-  //   // const posts = allPosts.filter(post => post.id !== id);
-  //   // this.setState({posts});
-  // }
-
-  render() {
   return (
-    <main className="Application" style={{
-      background: "url(https://skinrenewalmarco.com/wp-content/uploads/2016/03/shutterstock_345970301-e1536599252720.jpg) no-repeat center center fixed",
-      // backgroundSize: "cover",
-      height: "100%"
+    <main 
+    className="Application" 
+    style={{
+      background: "url(https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed",
+      backgroundSize:'cover',
+      height: '100%',
+      overflow: 'hidden'
       }}>
       <NavBar />
-      <h1>Think Piece</h1>
-      <Authentication />
+      <h1>Power Talk</h1>
+      {/* <Authentication /> */}
       <Switch>
-        <Route exact path="/" component={Posts}/>
-        <Route exact path="/profile" component={ UserProfile } />
+        <Route exact path="/" component={Authentication}/>
+        {/* <Route exact path="/" component={Posts}/> */}
+        <Route exact path="/posts" component={Posts}/>
+        <Route exact path="/profile" component={ ProfilePage } />
         <Route exact path="/posts/:id" component={ PostPage } />
+        <Route exact path="/signout" component={ SignOut} />
+        <Route exact path="/signin" component={ SignIn } />
+        <Route exact path="/signup" component={ SignUp } />
+        <Route exact path="/edityourprofile" component={() => < UserProfile {...user}/>} />
+        <Route path="*" component={() => <NotFound />} />
       </Switch>
+      <div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      </div>
     </main>
   );
 }
   
-}
+// }
 export default Application;
