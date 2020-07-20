@@ -55,7 +55,7 @@ export const createUserDocument = async (user, additionalData) => {
   // If there isn't a document for that user. Let's use information
   // that we got from either Google or our sign up form.
   if (!snapshot.exists) {
-    const { displayName, email, photoURL } = user;
+    const { displayName, email, photoURL, bio, location, socialMedia } = user;
     const createdAt = new Date();
     try {
       await userRef.set({
@@ -63,6 +63,9 @@ export const createUserDocument = async (user, additionalData) => {
         email,
         photoURL,
         createdAt,
+        bio,
+        location,
+        socialMedia,
         ...additionalData,
       });
     } catch (error) {

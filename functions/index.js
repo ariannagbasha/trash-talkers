@@ -1,5 +1,10 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
+const Filter = require('bad-words'),
+    
+filter = new Filter();
+ 
+// console.log(filter.clean("Don't be an ash0le"));
 
 admin.initializeApp(functions.config().firebase);
 const firestore = admin.firestore();
@@ -32,6 +37,34 @@ exports.sanitizeContent = functions.firestore
     }
     return null; // if there was no content
   });
+  
+  // exports.cleanerPostContent = functions.firestore
+  // .document("posts/{postId}")
+  // .onWrite(async (change) => {
+  //   if (!change.after.exists) return; // if the change resulted in a deletion, exit the code
+  //   const { content, sanitized } = change.after.data();
+  //   if (content && !sanitized) {
+  //     return change.after.ref.update({
+  //       content: filter.clean(content),
+  //       sanitized: true,
+  //     });
+  //   }
+  //   return null; // if there was no content
+  // });
+
+  // exports.cleanerCommentContent = functions.firestore
+  // .document("posts/{postId}/comment/{commentId}")
+  // .onWrite(async (change) => {
+  //   if (!change.after.exists) return; // if the change resulted in a deletion, exit the code
+  //   const { content, sanitized } = change.after.data();
+  //   if (content && !sanitized) {
+  //     return change.after.ref.update({
+  //       content: filter.clean(content),
+  //       sanitized: true,
+  //     });
+  //   }
+  //   return null; // if there was no content
+  // });
 
 exports.incrementCommentCount = functions.firestore
   .document("posts/{postId}/comment/{commentId}")

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bad-words": "^3.0.3",
     "bootstrap": "^4.5.0",
     "fast-crc32c": "^2.0.0",
     "firebase": "^7.16.1",
