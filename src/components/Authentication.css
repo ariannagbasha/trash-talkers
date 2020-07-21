@@ -42,7 +42,7 @@ p {
     margin-left: 5px;
 }
 
-img {
+img.Home {
     border-radius: 10%;
     position: absolute;
     right: 11%;

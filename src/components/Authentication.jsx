@@ -24,7 +24,7 @@ const Authentication = ({ loading }) => {
             </p>
           </div>
           <div className='column'>
-            <img src={download} alt="People Talking" />
+            <img className='Home' src={download} alt="People Talking" />
           </div>
         </div>
         <div className='button'>      
