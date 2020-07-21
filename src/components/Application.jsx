@@ -28,7 +28,8 @@ const Application = () => {
       backgroundSize:'cover',
       height: '100%',
       width: '100%',
-      backgroundPosition: 'center'
+      backgroundPosition: 'center',
+      backgroundRepeat: 'repeat'
       }}>
       <NavBar />
       <h1>Power Talk</h1>
@@ -72,7 +73,7 @@ const Application = () => {
         />
       </Switch>
       <div>
-         {/* <br/>
+         <br/>
         <br/>
         <br/>
         <br/>
@@ -84,23 +85,6 @@ const Application = () => {
         <br/>
         <br/>
         <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/> */}
       </div>
     </main>
   );
